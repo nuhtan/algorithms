@@ -1,5 +1,8 @@
-mod chapter2;
-mod chapter4;
+//! Crate Wide documentation
+
+pub mod chapter2;
+pub mod chapter4;
+pub mod chapter6;
 
 #[cfg(test)]
 mod tests {
