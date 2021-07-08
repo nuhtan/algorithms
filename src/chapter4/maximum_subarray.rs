@@ -16,7 +16,12 @@ pub fn find_maximum_subarray(array: &Vec<i32>, low: usize, high: usize) -> (usiz
     }
 }
 
-fn find_max_crossing_subarray(array: &Vec<i32>, low: usize, mid: usize, high: usize) -> (usize, usize, i32) {
+fn find_max_crossing_subarray(
+    array: &Vec<i32>,
+    low: usize,
+    mid: usize,
+    high: usize,
+) -> (usize, usize, i32) {
     let mut left_sum = (0, true);
     let mut sum = 0;
     let mut max_left = 0;
