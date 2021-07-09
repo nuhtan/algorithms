@@ -12,9 +12,16 @@ pub mod insertion_sort {
     /// - This sort has a time complexity of O(n<sup>2</sup>).
     ///
     /// Insertion sort loops through each value of the array starting from the front and checks if the value in front of it is of a lower value. If the value is lower, the elements are swapped, this happens until the value is at the front of the array or the value in front of it lower. This process repeats until the entire array has been traversed through the first loop.
-
-    // The generic T has the Copy trait so that we can limit the types to more straight forward copyable types.
-    // PartialEq and PartialOrd are included for the needed comparisons of the generic types.
+    ///
+    /// The generic T has the Copy trait so that we can limit the types to more straight forward copyable types.
+    /// PartialEq and PartialOrd are included for the needed comparisons of the generic types.
+    ///
+    /// # Arguments:
+    /// - 'input' - The array that is being sorted.
+    ///
+    /// # Returns:
+    /// This method has no return type as it modifies the input in place.
+    // TODO If the function operates in place then there is no need to return the input array.
     pub fn sort<T: Copy + PartialEq + PartialOrd>(input: &mut Vec<T>) -> &Vec<T> {
         for j in 1..input.len() {
             let key = input[j];
