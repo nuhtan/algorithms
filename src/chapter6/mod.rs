@@ -10,7 +10,7 @@ fn right(i: usize) -> usize {
     2 * i + 1
 }
 
-struct Heap<'a, T: Copy + PartialEq + PartialOrd> {
+pub struct Heap<'a, T: Copy + PartialEq + PartialOrd> {
     pub storage: &'a mut Vec<T>,
     pub heap_size: usize,
 }
@@ -24,7 +24,7 @@ impl<'a, T: Copy + PartialEq + PartialOrd> Heap<'a, T> {
     }
 }
 
-fn max_heapify<T: Copy + PartialEq + PartialOrd>(heap: &mut Heap<T>, i: usize) {
+pub fn max_heapify<T: Copy + PartialEq + PartialOrd>(heap: &mut Heap<T>, i: usize) {
     let l = left(i);
     let r = right(i);
     let mut largest;
@@ -44,7 +44,7 @@ fn max_heapify<T: Copy + PartialEq + PartialOrd>(heap: &mut Heap<T>, i: usize) {
     }
 }
 
-fn build_max_heap<T: Copy + PartialEq + PartialOrd>(array: &mut Vec<T>) -> Heap<T> {
+pub fn build_max_heap<T: Copy + PartialEq + PartialOrd>(array: &mut Vec<T>) -> Heap<T> {
     let mut heap = Heap::new(array);
     heap.heap_size = heap.storage.len();
     for i in heap.storage.len() / 2..1 {
@@ -53,7 +53,7 @@ fn build_max_heap<T: Copy + PartialEq + PartialOrd>(array: &mut Vec<T>) -> Heap<
     heap
 }
 
-fn heapsort<T: Copy + PartialEq + PartialOrd>(array: &mut Vec<T>) {
+pub fn heapsort<T: Copy + PartialEq + PartialOrd>(array: &mut Vec<T>) {
     let heap = build_max_heap(array);
     for i in array.len()..2 {
         let temp = array[1];
