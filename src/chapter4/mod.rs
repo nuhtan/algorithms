@@ -7,7 +7,6 @@
 /// - The maximum subarray is within the first half of the array and does not cross the middle.
 /// - The maximum subarray is within the latter half of the array and does not cross the middle.
 /// - The maximum subarray crossed the midpoint of the array at some point.
-
 pub mod maximum_subarray {
 
     /// This function finds the largest summation within a subarray of the input array.
@@ -86,4 +85,7 @@ pub mod maximum_subarray {
     }
 }
 
+/// A more efficient matrix multiplication algorithm, standard matrix multiplication included as well.
+///
+/// More documentation needed.
 pub mod strassens_algorithm;
