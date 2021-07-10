@@ -4,12 +4,12 @@
 //!
 //! This is based on the third edition.
 //!
-//! Chapters one and three are skipped as there are no specific algorithms that are detailed within them.
-
+//! Some chapters do not have code as they discuss topics that don't deal with specific code examples and cover more conceptual concepts.
 
 pub mod chapter2;
 pub mod chapter4;
 pub mod chapter6;
+pub mod chapter7;
 
 #[cfg(test)]
 mod tests {
